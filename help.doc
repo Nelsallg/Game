@@ -1,0 +1,6 @@
+compile-o: ## Compile project
+	@$(call GREEN, "Compilling file...")
+	$(GCC) -c src/$(FILENAME).c -o obj/$(FILENAME).o -I include
+compile-exe: ## Compile project
+	@$(call GREEN, "Compilling file...")
+	$(GCC) -o bin/jeu obj/init.o obj/main.o -lmingw32 -lSDL2main -lSDL2
